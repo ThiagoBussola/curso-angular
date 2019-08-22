@@ -101,21 +101,19 @@
 
 </section> -->
 
-<section class="two-way0binding">
+<!-- <app-meu-form></app-meu-form> -->
+
+<section class="input-output-properties">
+
     <article>
-        <h3>Two-way data binding</h3>
 
-        <div>
-            
-            <input type="text"
-                [value]="nome"
-                (input)="nome = $event.target.value"
-            
-            />
+        <h3>Input/Output Properties</h3>
 
-            <p>Você digitou o nome: {{ nome }}</p>
-        </div>
+        <app-curso [nome]="nomeDoCurso"></app-curso>
+
+        <contador [valor]="valorInicial"
+            (mudouValor)="onMudouValor($event)"
+        ></contador>
 
     </article>
 </section>
-

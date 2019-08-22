@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="nav navbar-nav">
+        <a class="nav-item nav-link"
+            [class.active]="aba == 'home'"
+            (click)="aba = 'home'"
+        >Home</a>
+            
+        <!-- quando eu clico o elemento recebe a string
+            
+            então se a string tem esse valor ele se torna ativo-->
+
+        <a class="nav-item nav-link"
+            [class.active]="aba == 'destaques'"
+            (click)="aba = 'destaques'">Destaques</a>
+            
+        <a class="nav-item nav-link"
+            [class.active]="aba == 'precos'"
+            (click)="aba = 'precos'">Preços</a>
+    </div>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+    <p *ngSwitchCase="'destaques'">Modo Destaques Ativado</p>
+    <p *ngSwitchCase="'precos'">Modo Precos Ativado</p>
+    <p *ngSwitchDefault>Home</p>
+
+</div>
