@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input name="nome" id="nome" [(ngModel)]="aluno.nome" type="text">
+                <input name="nome" id="nome" [(ngModel)]="aluno.nome" type="text" class="validate" (input)="onInput()">
                 <label class="active" for="nome">Nome</label>
             </div>
         </div>
@@ -17,7 +17,6 @@
                 <input name="email" id="email" [(ngModel)]="aluno.email" type="email">
                 <label class="active" for="email">Email</label>
             </div>
-        </div>
-        
+        </div> 
     </form>
 </div>
